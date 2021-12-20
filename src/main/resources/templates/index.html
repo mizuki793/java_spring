@@ -15,28 +15,37 @@
 		<form action="introduction" method="post">
 			<ul class="col">
 				<li>
-					<button type='submit' name='introduction'> 自己紹介 </button>
+					<button type='submit' name="${introduction.url}" >
+						<div th:text="${introduction.view_name}"></div>
+					</button>
 				</li>
 				<br/>
 		</form>
 
 		<form action="books" method="post">
 				<li>
-					<button type='submit' name='books'> 好きな本 </button>
+					<button type='submit' name="${book.url}" >
+						<div th:text="${book.view_name}"></div>
+					</button>
 				</li>
 				<br/>
 		</form>
 
 		<form action="anime" method="post">
 				<li>
-					<button type='submit' name='anime'> 好きなアニメ </button>
+					<button type='submit' name="${anime.url}" >
+						<div th:text="${anime.view_name}"></div>
+					</button>
 				</li>
 				<br/>
 		</form>
 
 		<form action="movie" method="post">
 				<li>
-					<button type='submit' name='movie'> 好きな動画 </button>
+					<button type='submit' name="${movie.url}" >
+						<div th:text="${movie.view_name}"></div>
+					</button>
+
 				</li>
 		</form>
 			</ul>
