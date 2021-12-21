@@ -5,49 +5,29 @@
 		<title>TOP画面</title>
 
 		<style>
-			.column{column-count: 1;}
+			.column{
+				column-count: 1;
+
+			}
+			li{
+				margin:20px;
+			}
 		</style>
 	</head>
 
 	<body>
 		<br/>
 		<h1>menu</h1>
-		<form action="introduction" method="post">
-			<ul class="col">
+        <ul class="col">
+			<tr th:each="button : ${buttonList}">
 				<li>
-					<button type='submit' name="${introduction.url}" >
-						<div th:text="${introduction.view_name}"></div>
-					</button>
-				</li>
-				<br/>
-		</form>
-
-		<form action="books" method="post">
-				<li>
-					<button type='submit' name="${book.url}" >
-						<div th:text="${book.view_name}"></div>
-					</button>
-				</li>
-				<br/>
-		</form>
-
-		<form action="anime" method="post">
-				<li>
-					<button type='submit' name="${anime.url}" >
-						<div th:text="${anime.view_name}"></div>
-					</button>
-				</li>
-				<br/>
-		</form>
-
-		<form action="movie" method="post">
-				<li>
-					<button type='submit' name="${movie.url}" >
-						<div th:text="${movie.view_name}"></div>
-					</button>
-
-				</li>
-		</form>
-			</ul>
+					<form th:action="${button.url}" method="post">
+		                <button type='submit' name="${button.url}" >
+		                    <div th:text="${button.view_name}"></div>
+		                </button>
+	                </form>
+	            </li>
+			</tr>
+		</ul>
 	</body>
 </html>
