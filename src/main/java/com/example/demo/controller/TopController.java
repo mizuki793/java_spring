@@ -10,12 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.demo.constants.Button;
 import com.example.demo.service.ButtonService;
 
-	@Controller
-	@RequestMapping("/top")
-	public class TopController {
+@Controller
+public class TopController {
 
-		@Autowired
-		ButtonService buttonService;
+	@Autowired
+	ButtonService buttonService;
 
 
 	 @RequestMapping("/")
@@ -25,9 +24,25 @@ import com.example.demo.service.ButtonService;
 	    return "index";
 	 }
 
-	@RequestMapping("introduction")
-	 public String introduce() {
+	@RequestMapping("/introduction")
+	 public String introduction() {
 	   return "introduction";
 	}
+
+	@RequestMapping("/book")
+	 public String book(Model model) {
+	   return "book";
+	}
+
+	@RequestMapping("/anime")
+	 public String anime(Model model) {
+	   return "anime";
+	}
+
+	@RequestMapping("/movie")
+	 public String movie(Model model) {
+	   return "movie";
+	}
+
 
 }
