@@ -12,15 +12,10 @@ public class ButtonService {
 
 	public List<Button> getButtonList() {
 		List<Button> buttonList = new ArrayList<Button>();
-		Button introduction = new Button("自己紹介","introduction");
-		Button book = new Button("好きな本","book");
-		Button anime = new Button("好きなアニメ","anime");
-		Button movie = new Button("好きな動画","movie");
-
-		buttonList.add(introduction);
-		buttonList.add(book);
-		buttonList.add(anime);
-		buttonList.add(movie);
+		buttonList.add(new Button("自己紹介","introduction"));
+		buttonList.add(new Button("好きな本","book"));
+		buttonList.add(new Button("好きなアニメ","anime"));
+		buttonList.add(new Button("好きな動画","movie"));
 
 		return buttonList;
 	}
