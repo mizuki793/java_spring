@@ -31,7 +31,6 @@ public class TopController {
 		pageHtml = topPage.GetHtml();
 		List<Button> buttonList = buttonService.getButtonList();
 		model.addAttribute("buttonList" ,buttonList);
-		model.addAttribute("title",topPage.GetTitle());
 	    return pageHtml;
 
 	 }
